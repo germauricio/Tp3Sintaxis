@@ -1,0 +1,190 @@
+# depslib dependency file v1.0
+1566627154 source:c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<string.h>
+	"listaOperadores.h"
+	"palabrasReservadas.h"
+	"listaComentarios.h"
+	"listaIdentificadores.h"
+	"listaCadenaNR.h"
+	"constanteReal.h"
+	"constanteOctalHexaDec.h"
+	"listaCaractPunt.h"
+	"literalCadena.h"
+	"reporte.h"
+	<stdlib.h>
+
+1566513891 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\listaoperadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566626549 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\palabrasreservadas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1566513886 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\listacomentarios.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513886 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\listaidentificadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513893 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\listacadenanr.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513903 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\constantereal.h
+	<stdlib.h>
+	<stdio.h>
+
+1566624214 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\constanteoctalhexadec.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1566513895 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\listacaractpunt.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513889 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\literalcadena.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513899 c:\users\matia.desktop-frsoqph\facultad\2º año\sintaxis\tptress\reporte.h
+	<stdio.h>
+	<stdlib.h>
+
+1566627154 source:c:\users\mauri\desktop\tptress\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<string.h>
+	"listaOperadores.h"
+	"palabrasReservadas.h"
+	"listaComentarios.h"
+	"listaIdentificadores.h"
+	"listaCadenaNR.h"
+	"constanteReal.h"
+	"constanteOctalHexaDec.h"
+	"listaCaractPunt.h"
+	"literalCadena.h"
+	"reporte.h"
+	<stdlib.h>
+
+1566513891 c:\users\mauri\desktop\tptress\listaoperadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566626549 c:\users\mauri\desktop\tptress\palabrasreservadas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1566513886 c:\users\mauri\desktop\tptress\listacomentarios.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513886 c:\users\mauri\desktop\tptress\listaidentificadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513893 c:\users\mauri\desktop\tptress\listacadenanr.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513903 c:\users\mauri\desktop\tptress\constantereal.h
+	<stdlib.h>
+	<stdio.h>
+
+1566624214 c:\users\mauri\desktop\tptress\constanteoctalhexadec.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1566513895 c:\users\mauri\desktop\tptress\listacaractpunt.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513889 c:\users\mauri\desktop\tptress\literalcadena.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513899 c:\users\mauri\desktop\tptress\reporte.h
+	<stdio.h>
+	<stdlib.h>
+
+1566863079 source:c:\users\mauri\documents\gnuwin32\bin\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<string.h>
+	"listaOperadores.h"
+	"palabrasReservadas.h"
+	"listaComentarios.h"
+	"listaIdentificadores.h"
+	"listaCadenaNR.h"
+	"constanteReal.h"
+	"constanteOctalHexaDec.h"
+	"listaCaractPunt.h"
+	"literalCadena.h"
+	"reporte.h"
+	<stdlib.h>
+
+1566513891 c:\users\mauri\documents\gnuwin32\bin\listaoperadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566626549 c:\users\mauri\documents\gnuwin32\bin\palabrasreservadas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1566513886 c:\users\mauri\documents\gnuwin32\bin\listacomentarios.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513886 c:\users\mauri\documents\gnuwin32\bin\listaidentificadores.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513893 c:\users\mauri\documents\gnuwin32\bin\listacadenanr.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513903 c:\users\mauri\documents\gnuwin32\bin\constantereal.h
+	<stdlib.h>
+	<stdio.h>
+
+1566624214 c:\users\mauri\documents\gnuwin32\bin\constanteoctalhexadec.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1566513895 c:\users\mauri\documents\gnuwin32\bin\listacaractpunt.h
+	<stdio.h>
+	<stdlib.h>
+
+1566863466 c:\users\mauri\documents\gnuwin32\bin\literalcadena.h
+	<stdio.h>
+	<stdlib.h>
+
+1566513899 c:\users\mauri\documents\gnuwin32\bin\reporte.h
+	<stdio.h>
+	<stdlib.h>
+
