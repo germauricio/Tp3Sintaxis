@@ -21,24 +21,24 @@ CEHEXA			0[xX][A-Fa-f0-9]+
 CREAL	        [0-9]*"."[0-9]+([eE]([\+\-]?)[0-9]+)?
 PRESERVADA      while|for|do|if|else|int|char|return|case|switch
 ID       		[a-zA-Z_][a-zA-Z0-9_]*
+COMENTARIO		\/\/(.)*
 CARPUNTUACION	[,\/#!$\^;{}`~()]
 LITCADENA	    \"([ -!#-~]|\\\")*\"
-COMENTARIO		\/\/(.)*
 OPERADOR        &&|==|sizeof|\|\||\+=|>=|<=|\*=|\+\+|%=|\-=|\/=|[<>\+\-*&!\/%]
 NORECONOCIDO    .
 %%
 
-{PRESERVADA}    {agregarPalabra(yytext);}
+
 {CEDECIMAL}     {agregarDec(yytext);}
 {CEOCTAL}       {agregarOctal(yytext,yyleng);}
 {CEHEXA}        {agregarHexa(yytext,yyleng);}
 {CREAL}         {agregarReal(yytext);}
+{PRESERVADA}    {agregarPalabra(yytext);}
 {ID}            {agregarId(yytext);}
-{LITCADENA}     {agregarCad(yytext,yyleng);}
 {COMENTARIO}    {agregarComentario(yytext);}
-{CARPUNTUACION} {agregarCaract(yytext);}
+{LITCADENA}     {agregarCad(yytext,yyleng);}
 {OPERADOR}      {agregarOp(yytext);}
-
+{CARPUNTUACION} {agregarCaract(yytext);}
 {NORECONOCIDO}  {agregarCadenaNR(yytext);}
 
 
