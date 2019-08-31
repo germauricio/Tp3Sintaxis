@@ -2,9 +2,11 @@
 #include <stdlib.h>
 
 typedef struct puntuacion{
-    char* caracter;
+
 	int cantidad;
     struct puntuacion* next;
+     char caracter[];
+
 }puntuacion;
 
 puntuacion *primeroPuntuacion, *ultimoPuntuacion;
@@ -12,7 +14,7 @@ puntuacion *primeroPuntuacion, *ultimoPuntuacion;
 int encontradoCaracter(puntuacion* lista,char* caracter){
 	puntuacion* aux = primeroPuntuacion;
 	while(aux!=NULL){
-		if(aux->caracter == caracter){
+		if(!strcmp(aux->caracter, caracter)){
 			aux->cantidad ++;
 			return 1;
 		}else{
@@ -26,7 +28,7 @@ void agregarCaract(char* caracterNuevo){
     puntuacion *nuevo;
 	nuevo = (puntuacion *) malloc (4+4+strlen(caracterNuevo));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-  	nuevo -> caracter = caracterNuevo;
+  	strcpy(nuevo -> caracter , caracterNuevo);
     nuevo -> cantidad = 1;
     nuevo -> next = NULL;
     if(encontradoCaracter(nuevo,caracterNuevo)==0){
@@ -41,7 +43,7 @@ void agregarCaract(char* caracterNuevo){
 }
 void recorrerListaCaracteres(){
     puntuacion *auxiliar=primeroPuntuacion;
-    printf("\nMostrando la lista de caracteres de puntuacion:\n");
+    printf("\n__________Mostrando la lista de caracteres de puntuacion:\n\n");
     while (auxiliar!=NULL) {
             printf( "Nombre: %s\n", auxiliar->caracter);
             printf( "Cantidad : %d\n", auxiliar->cantidad);

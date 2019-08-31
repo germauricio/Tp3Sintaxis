@@ -2,15 +2,26 @@
 #include <stdlib.h>
 
 void realizarReporte (){
-	mostrarDec();
-	mostrarOctal();
-	mostrarHexadecimal();
-	recorrerListaReales();
+
+    mostrarDec();
+
+    mostrarOctal();
+
+    mostrarHexadecimal();
+
 	recorrerListaId();
-	recorrerListaCaracteres();
-	recorrerListaCadena();
-	recorrerListaCom();
-	recorrerListaOp();
+
 	recorrerListaPr();
+
+	recorrerListaReales();
+
+	recorrerListaCaracteres();
+
+	recorrerListaCadena();
+	recorrerListaOp();
+
+	recorrerListaCom();
 	recorrerListaNoReconocidos();
+
+
 }

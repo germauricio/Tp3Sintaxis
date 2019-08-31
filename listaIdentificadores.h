@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct node{
-    char identificador[90];
+
 	int cantidad;
     struct node* next;
+    char identificador[];
 }nodoIdentificador;
 
-nodoIdentificador *primeroId, *ultimoId;
+nodoIdentificador *primeroId=NULL;
 
 int idEncontrado(nodoIdentificador* lista,char* iden){
 	nodoIdentificador* aux = primeroId;
 	while(aux!=NULL){
-		if(aux->identificador == iden){
+		if(!strcmp(aux->identificador, iden)){
 			aux->cantidad ++;
 			return 1;
 		}else{
@@ -26,22 +28,29 @@ void agregarId(char *iden){
     nodoIdentificador *nuevo;
 	nuevo = (nodoIdentificador *) malloc (4+4+strlen(iden));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
+
   	strcpy(nuevo -> identificador, iden);
+  	//printf("agrego %s ", iden);
     nuevo -> cantidad = 1;
     nuevo -> next = NULL;
     if(idEncontrado(nuevo,iden)==0){
-    if (primeroId==NULL) {
-        primeroId = nuevo;
-        ultimoId = nuevo;
-    } else {
-    	ultimoId->next = nuevo;
-        ultimoId = nuevo;
-    	}
+     if (primeroId==NULL) {
+            primeroId = nuevo;
+            //ultimoPr = nuevo;
+        } else {
+            nodoIdentificador* aux=primeroId;
+            while(aux->next!=NULL){
+                aux=aux->next;
+            }
+            aux->next=nuevo;
+        }
 	}
+
 }
 void recorrerListaId(){
+
     nodoIdentificador *auxiliar=primeroId;
-    printf("\nMostrando la lista de identificadores:\n");
+    printf("\n__________Mostrando la lista de identificadores:\n\n");
     while (auxiliar!=NULL) {
             printf( "Nombre: %s\n", auxiliar->identificador);
             printf( "Cantidad : %d\n", auxiliar->cantidad);

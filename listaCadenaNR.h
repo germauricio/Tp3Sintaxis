@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef struct cadenaNoReconocida{
-    char* cadenaNR;
+    char cadenaNR[10];
     struct cadenaNoReconocida* next;
 }cadenaNoReconocida;
 
@@ -12,7 +12,7 @@ void agregarCadenaNR(char* cadenaNRNuevo){
     cadenaNoReconocida *nuevo;
 	nuevo = (cadenaNoReconocida *) malloc (4+strlen(cadenaNRNuevo));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-  	nuevo -> cadenaNR = cadenaNRNuevo;
+  	strcpy(nuevo -> cadenaNR, cadenaNRNuevo);
     nuevo -> next = NULL;
     if (primeroCadenaNoReconocida==NULL) {
         primeroCadenaNoReconocida = nuevo;
@@ -25,7 +25,7 @@ void agregarCadenaNR(char* cadenaNRNuevo){
 
 void recorrerListaNoReconocidos(){
     cadenaNoReconocida *auxiliar=primeroCadenaNoReconocida;
-    printf("\nMostrando la lista de no reconocidos:\n");
+    printf("\n__________Mostrando la lista de no reconocidos:\n\n");
     while (auxiliar!=NULL) {
             printf( "Nombre: %s\n", auxiliar->cadenaNR);
             auxiliar = auxiliar->next;

@@ -1,1 +1,4 @@
-5241 0x5f8 0547 457 0Xa34c5d 154 04562 0xaD546 0.6541 ioi while if do else chau for char /*coment*/ "literalCadena" int char 3dre 
+ioi 0745 //comentarioDeuNAlinea 
+$ " " while 0x5f if .031 241 do || else "me quiero morir" acum / hola ++ valor ; sizeof 74121 0XFFG iden "esta es # una \ cadena" /*coment*/ 0.3E+9 for >= char  412 int 
+char # 0.36  2.36 ioi acum { # "cadena"
+== identif && ++ 0741 ' ' ' ? "cadena con \"comillas\" adentro"

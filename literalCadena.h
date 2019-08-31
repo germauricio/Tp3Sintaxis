@@ -49,7 +49,7 @@ void recorrerListaCadena(){
     cad *auxiliar=primeroCAD;
     int i;
     i=0;
-    printf("\nMostrando lista de cadenas:\n");
+    printf("\n__________Mostrando lista de cadenas:\n\n");
     while (auxiliar!=NULL) {
             printf( "cadena: %s\n", auxiliar->nombre);
             printf( "tamanio: %i\n", auxiliar->tamanio);

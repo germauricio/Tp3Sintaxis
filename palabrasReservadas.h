@@ -25,10 +25,10 @@ if((strcmp("const", palabra)==0) ||  (strcmp("emun", palabra)==0) || (strcmp("re
 
 
 Palabra* prEncontrado(Palabra *Lista,char *cadena){
-	char *a;
+	char a[100];
 	while(Lista!=NULL){
-        a = Lista->nombre;
-		if(a == cadena){
+        strcpy(a,Lista->nombre);
+		if(!strcmp(a,cadena)){
 			return Lista;
 		}else{
 			Lista=Lista->sig;
@@ -47,6 +47,7 @@ void agregarPalabra(char *palabraReservada){
 	if(encontrar == NULL){
         if (nuevo == NULL) printf( "No hay memoria disponible!\n");
         strcpy(nuevo -> nombre, palabraReservada);
+      //  printf("agrego %s ", palabraReservada);
         nuevo -> tipo = tipo (palabraReservada);
         nuevo -> sig = NULL;
         if (primeroPr==NULL) {
@@ -66,7 +67,7 @@ void recorrerListaPr(){
     Palabra *auxiliar=primeroPr;
     int i;
     i=0;
-    printf("Mostrando lista de palabras reservadas:\n\n");
+    printf("\n__________Mostrando lista de palabras reservadas:\n\n");
     while (auxiliar!=NULL) {
             printf( "Palabra reservada: %s \n", auxiliar->nombre);
             printf ("De tipo: %s\n", auxiliar->tipo);

@@ -1,20 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 typedef struct nodo{
-    char *nombreId;
+
     int cantId;
     struct nodo *sig;
+    char nombreId[10];
 } constantesReales;
 
 constantesReales *primeroReal, *ultimoReal;
 
 void agregarReal(char *numeroNuevo){
     constantesReales *nuevo;
+
 	int a = atof(numeroNuevo);
+
 	nuevo = (constantesReales *) malloc (sizeof(constantesReales));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-    nuevo -> nombreId = numeroNuevo;
+    strcpy(nuevo -> nombreId, numeroNuevo);
+    //printf("agrego %s ", numeroNuevo);
     nuevo -> cantId = a;
     nuevo -> sig = NULL;
     if (primeroReal==NULL) {
@@ -31,7 +36,7 @@ void recorrerListaReales(){
     int i;
     i=0;
     float a;
-    printf("\nMostrando lista de reales:\n");
+    printf("\n__________Mostrando lista de reales:\n\n");
     while (auxiliar!=NULL) {
             a = atof(auxiliar -> nombreId)-(auxiliar -> cantId);
             printf( "Numero: %s\n", auxiliar -> nombreId);

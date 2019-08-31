@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 typedef struct operadores{
-    char* operador;
+
 	int cantidad;
     struct operadores* next;
+    char operador[];
 }operadores;
 
 operadores *primeroOperador, *ultimoOperador;
@@ -12,7 +13,7 @@ operadores *primeroOperador, *ultimoOperador;
 int opEncontrado(operadores* lista,char* operador){
 	operadores* aux = primeroOperador;
 	while(aux!=NULL){
-		if(aux->operador == operador){
+		if(!strcmp(aux->operador,operador)){
 			aux->cantidad ++;
 			return 1;
 		}else{
@@ -26,7 +27,7 @@ void agregarOp(char* operadorNuevo){
     operadores *nuevo;
 	nuevo = (operadores *) malloc (4+4+strlen(operadorNuevo));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-  	nuevo -> operador = operadorNuevo;
+  	strcpy(nuevo -> operador,operadorNuevo);
     nuevo -> cantidad = 1;
     nuevo -> next = NULL;
     if(opEncontrado(nuevo,operadorNuevo)==0){
@@ -41,7 +42,7 @@ void agregarOp(char* operadorNuevo){
 }
 void recorrerListaOp(){
     operadores *auxiliar=primeroOperador;
-    printf("\nMostrando la lista de operadores:\n");
+    printf("\n__________Mostrando la lista de operadores:\n\n");
     while (auxiliar!=NULL) {
             printf( "Nombre: %s\n", auxiliar->operador);
             printf( "Cantidad : %d\n", auxiliar->cantidad);

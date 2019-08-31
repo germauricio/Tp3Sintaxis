@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef struct comentarios{
-    char* comentario;
+    char comentario[50];
     struct comentarios* next;
 }comentarios;
 
@@ -12,7 +12,8 @@ void agregarComentario(char* comentarioNuevo){
     comentarios *nuevo;
 	nuevo = (comentarios *) malloc (4+strlen(comentarioNuevo));
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-  	nuevo -> comentario = comentarioNuevo;
+  	strcpy(nuevo -> comentario, comentarioNuevo);
+
     nuevo -> next = NULL;
     if (primeroComentarios==NULL) {
         primeroComentarios = nuevo;
@@ -25,7 +26,7 @@ void agregarComentario(char* comentarioNuevo){
 
 void recorrerListaCom(){
     comentarios *auxiliar=primeroComentarios;
-    printf("\nMostrando la lista de comentarios:\n");
+    printf("\n__________Mostrando la lista de comentarios:\n\n");
     while (auxiliar!=NULL) {
             printf( "Nombre: %s\n", auxiliar->comentario);
             auxiliar = auxiliar->next;

@@ -1,23 +1,29 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+
 
 typedef struct nodo1{
-    char *nombreId;
+
     int cantId;
     struct nodo1 *sig;
+     char nombreId[];
 } octales, hexadecimales;
 	octales *primeroOctal, *ultimoOctal = NULL;
 	hexadecimales *primeroHexa, *ultimoHexa = NULL;
 
 typedef struct nodo2{
-	char *nombreId;
+
 	struct nodo2 *sig;
+	char nombreId[];
 } decimales;
 decimales *primeroDecimal, *ultimoDecimal = NULL;
 
 int acumDec = 0;
+
 int octalADecimal(char *cadenaOctal, int longitud) {
+
   int decimal = 0;
   int potencia = 0;
   for (int i = longitud - 1; i >= 0; i--) {
@@ -42,7 +48,7 @@ void agregarOctal(char *numeroNuevo, int longitud){
 	nuevo = (octales*) malloc (4+4+strlen(numeroNuevo));
 
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-    nuevo -> nombreId = numeroNuevo;
+    strcpy(nuevo -> nombreId , numeroNuevo);
 
     nuevo -> cantId = a;
     nuevo -> sig = NULL;
@@ -55,10 +61,9 @@ void agregarOctal(char *numeroNuevo, int longitud){
     }
 }
 
-
 void mostrarOctal() {
  octales* aux = primeroOctal;
- printf("Mostrando lista de octales:\n\n");
+ printf("\n__________Mostrando lista de octales:\n\n");
  while( aux!=NULL ) {
  	printf("%s%s\n","Numero en octal: ",aux->nombreId);
 	printf("%s%d\n","Valor en Decimal: ",aux->cantId);
@@ -73,6 +78,7 @@ int caracterHexadecimalADecimal(char caracter) {
 }
 
 int hexadecimalADecimal(char *cadenaHexadecimal, int longitud) {
+
 
   int decimal = 0;
   int potencia = 0;
@@ -98,7 +104,7 @@ void agregarHexa(char *numeroNuevo, int longitud){
 	nuevo = (hexadecimales*) malloc (4+4+strlen(numeroNuevo));
 
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-    nuevo -> nombreId = numeroNuevo;
+    strcpy(nuevo -> nombreId ,numeroNuevo);
 
     nuevo -> cantId = a;
     nuevo -> sig = NULL;
@@ -113,6 +119,7 @@ void agregarHexa(char *numeroNuevo, int longitud){
 
 
 void mostrarHexadecimal() {
+ printf("\n_________Mostrando Hexadecimales:\n\n");
  hexadecimales* aux = primeroHexa;
  while( aux!=NULL ) {
  	printf("%s%s\n","Numero en hexadecimal: ",aux->nombreId);
@@ -130,11 +137,10 @@ void agregarDec (char *cadenaDecimal ){
 
 	sumarAcum(cadenaDecimal);
 
-	nuevo = (octales*) malloc (4+strlen(cadenaDecimal));
+	nuevo = (decimales*) malloc (4+strlen(cadenaDecimal));
 
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
-    nuevo -> nombreId = cadenaDecimal;
-    printf("agre %s \n", nuevo -> nombreId);
+    strcpy(nuevo -> nombreId,cadenaDecimal);
     nuevo -> sig = NULL;
     if (primeroDecimal==NULL) {
         primeroDecimal = nuevo;
@@ -147,7 +153,7 @@ void agregarDec (char *cadenaDecimal ){
 
 void mostrarDec (){
 	decimales* aux = primeroDecimal;
-    printf("Mostrando lista de decimales:\n\n");
+    printf("__________Mostrando lista de decimales:\n\n");
 
  while( aux!=NULL ) {
  	printf("%s%s\n","Numero decimal: ",aux->nombreId);
