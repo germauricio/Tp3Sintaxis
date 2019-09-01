@@ -6,11 +6,11 @@ typedef struct comentarios{
     struct comentarios* next;
 }comentarios;
 
-comentarios *primeroComentarios, *ultimoComentarios;
+comentarios *primeroComentarios, *ultimoComentarios = NULL;
 
 void agregarComentario(char* comentarioNuevo){
     comentarios *nuevo;
-	nuevo = (comentarios *) malloc (4+strlen(comentarioNuevo));
+	nuevo = (comentarios *) malloc (4+50);
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
   	strcpy(nuevo -> comentario, comentarioNuevo);
 

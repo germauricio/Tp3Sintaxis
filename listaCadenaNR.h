@@ -10,7 +10,7 @@ cadenaNoReconocida *primeroCadenaNoReconocida, *ultimoCadenaNoReconocida;
 
 void agregarCadenaNR(char* cadenaNRNuevo){
     cadenaNoReconocida *nuevo;
-	nuevo = (cadenaNoReconocida *) malloc (4+strlen(cadenaNRNuevo));
+	nuevo = (cadenaNoReconocida *) malloc (4+10);
     if (nuevo == NULL) printf( "No hay memoria disponible!\n");
   	strcpy(nuevo -> cadenaNR, cadenaNRNuevo);
     nuevo -> next = NULL;

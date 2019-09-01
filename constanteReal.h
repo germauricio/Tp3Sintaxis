@@ -9,7 +9,7 @@ typedef struct nodo{
     char nombreId[10];
 } constantesReales;
 
-constantesReales *primeroReal, *ultimoReal;
+constantesReales *primeroReal, *ultimoReal = NULL;
 
 void agregarReal(char *numeroNuevo){
     constantesReales *nuevo;

@@ -446,7 +446,7 @@ char *yytext;
     #include "listaCaractPunt.h"
     #include "literalCadena.h"
     #include "reporte.h"
- 
+
 #line 451 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
@@ -1651,5 +1651,5 @@ int main(){
 }
 yywrap(){
 
-  
+
 }
